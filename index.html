@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GPT-3 Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #chat-container {
+            max-width: 400px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        #chat-display {
+            border: 1px solid #eee;
+            border-radius: 5px;
+            min-height: 200px;
+            padding: 10px;
+            overflow-y: scroll;
+            background-color: #f5f5f5;
+        }
+        .user-input {
+            width: 70%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .send-button {
+            width: 28%;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0074D9;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-display" class="chat-display">
+            <!-- Chat messages will be displayed here -->
+        </div>
+        <div class="input-container">
+            <input type="text" id="user-input" class="user-input" placeholder="Type your message...">
+            <button id="send-button" class="send-button">Send</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
